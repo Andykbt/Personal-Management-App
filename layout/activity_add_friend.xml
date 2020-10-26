@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".AddFriendActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_outer_friendImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_view_outer_form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            app:cardBackgroundColor="@color/cardColour"
+            app:cardCornerRadius="25dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/TextView_AddImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="addImage"
+                    android:text="Add Image"
+                    android:textColor="@color/clickableFontColour"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/friendImageCard"
+                    app:layout_constraintVertical_bias="0.25" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/friendImageCard"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="12dp"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    android:thicknessRatio="1.9"
+                    app:cardBackgroundColor="@color/secondaryFontColour"
+                    app:cardCornerRadius="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25">
+
+                    <ImageView
+                        android:id="@+id/friendImage"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:onClick="addImage"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.25" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_outer_form"
+        android:layout_width="325dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/cardColour"
+            app:cardCornerRadius="25dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="290dp"
+                    android:layout_height="270dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/editTextTextFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:ems="10"
+                        android:hint="First Name"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/secondaryFontColour" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:ems="10"
+                        android:hint="Last Name"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/secondaryFontColour" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:ems="10"
+                        android:hint="Gender"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/secondaryFontColour" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:ems="10"
+                        android:hint="Age"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/secondaryFontColour" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:ems="10"
+                        android:hint="Address"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/secondaryFontColour" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
