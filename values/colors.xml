@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#1F1F1F</color>
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="cardFontColour">#DEDEDE</color>
+    <color name="cardColour">#1E1E1E</color>
+    <color name="secondaryFontColour">#BB86FC</color>
+    <color name="tertiaryColour">#3C3C3C</color>
+    <color name="clickableFontColour">#34A1FC</color>
+    <color name="clickableFontColourRed">#F60405</color>
+</resources>
